@@ -1,36 +1,97 @@
 'use strict';
 
-alert('Hello. Answer some questions to learn a little bit about me');
+var counter = 0;
+
+alert('Hello. Please answer some questions to learn a little bit about me!');
 var answerOne = prompt('Do I like spam? Please answer yes or no.').toLowerCase();
 var responseOne = 'Yes'.toLowerCase();
 if (answerOne === responseOne){
   alert('yes, you are correct, one point for you!');
-}
-else {
+  counter++;
+} else {
   alert('Who doesn\'t like spam? You get no points!');
 }
 console.log('spam', answerOne);
 console.log('yes', responseOne);
 
-var answerTwo = prompt('How many toes do I have?').toLowerCase();
-var responseTwo = '10'.parseInt();
+var answerTwo = parseInt(prompt('How many toes do I have?').toLowerCase());
+var responseTwo = 10;
 if (answerTwo === responseTwo){
   alert('That\'s right, I have 10 toes.');
-}
-else {
+  counter++;
+} else {
   alert('No, I have 10 toes.');
 }
-console.log('two', answerTwo);
+console.log('10', answerTwo);
 console.log('10', responseTwo);
 
-
-alert('I have 10');
 var answerThree = prompt('What is my favorite food?').toLowerCase();
-console.log('vietnameseFood', answerThree);
-alert('Christmas is alright, Thanksgiving is where it\'s at');
+var responseThree = 'Vietnamese'.toLowerCase();
+if (answerThree === responseThree) {
+  alert('Yes, I love it!');
+  counter++;
+} else {
+  alert('No, it\'s Vietnamese food');
+}
+console.log('VietnameseFood', answerThree);
+console.log('VietnameseFood', responseThree);
+
 var answerFour = prompt('What is my favorite show right now?').toLowerCase();
+var responseFour = '90 Day Fiance'.toLowerCase();
+if (answerFour === responseFour) {
+  alert('Yes that\'s right!');
+  counter++;
+} else {
+  alert('Nah you wrong');
+}
 console.log('90DayFiance', answerFour);
-alert('Water consumption is definitely necessary. Otherwise, you die.');
-var answerFive = prompt('Am I good at sports?').toLowerCase();
-console.log('gills', answerFive);
-alert('No, but that\'s your opinion');
+console.log('90 Day Fiance', responseFour);
+
+var answerFive = prompt('Am I good at sports? Please answer yes or no.').toLowerCase();
+var responseFive = 'No';
+if (answerFive === responseFive) {
+  alert('That\'s correct!');
+  counter++;
+} else {
+  alert('That\'s incorrect.');
+}
+console.log('No', answerFive);
+console.log ('No', responseFive);
+
+var answerSix = parseInt(prompt('How many siblings do I have?').toLowerCase());
+var responseSix = 6;
+if (answerSix === responseSix) {
+  alert('That\'s right! How did you know?');
+  counter++;
+} else {
+  alert('That\'s wrong!!!!');
+}
+console.log('7', answerSix);
+console.log('7', responseSix);
+
+// var answerSeven = prompt('What is my favorite color?').toLowerCase();
+// var responseSeven = ['purple', 'pink', 'grey'];
+// var correct = false;
+
+// while (correct === false) {
+//   for (var i = 0; i < responseSeven.length; i++) {
+//     if (answerSeven === responseSeven[i]){
+//       correct = true;
+//       alert('That\'s right!!!!');
+//       break;
+//     } else if (answerSeven === responseSeven[i]) {
+//       alert('That\'s right!!!!');
+//       correct = true;
+//       break;
+//     } else {
+//       alert('Nope you picked an ugly color.');
+//       correct = false;
+//       break;
+//     }
+//   }
+// }
+
+// console.log('favoriteColor', answerSeven);
+// console.log('responseSeven', responseSeven);
+
+alert('Thanks! You got ' + counter + ' out of 7 right! ');
