@@ -69,29 +69,32 @@ if (answerSix === responseSix) {
 console.log('7', answerSix);
 console.log('7', responseSix);
 
-// var answerSeven = prompt('What is my favorite color?').toLowerCase();
-// var responseSeven = ['purple', 'pink', 'grey'];
-// var correct = false;
+function seventhQuestion() {
+  var answerSeven = prompt('What is my favorite color?').toLowerCase();
+  var responseSeven = ['purple', 'pink', 'grey'];
+  var colorCounter = 0;
+  var correct = false;
+  console.log('favoriteColor', answerSeven);
+  console.log('responseSeven', responseSeven);
 
-// while (correct === false) {
-//   for (var i = 0; i < responseSeven.length; i++) {
-//     if (answerSeven === responseSeven[i]){
-//       correct = true;
-//       alert('That\'s right!!!!');
-//       break;
-//     } else if (answerSeven === responseSeven[i]) {
-//       alert('That\'s right!!!!');
-//       correct = true;
-//       break;
-//     } else {
-//       alert('Nope you picked an ugly color.');
-//       correct = false;
-//       break;
-//     }
-//   }
-// }
+  while (correct === false && colorCounter < 5) {
+    for (var i = 0; i < responseSeven.length; i++) {
+      if (answerSeven === responseSeven[i]){
+        correct = true;
+      } if (answerSeven === responseSeven[i]) {
+        alert('That\'s right!!!!');
+        correct = true;
+        counter++;
+        break;
+      } else {
+        responseSeven = prompt('Try Again.');
+        colorCounter++;
+        break;
+      }
+    }
+  }
+}
 
-// console.log('favoriteColor', answerSeven);
-// console.log('responseSeven', responseSeven);
+seventhQuestion();
 
 alert('Thanks! You got ' + counter + ' out of 7 right! ');
